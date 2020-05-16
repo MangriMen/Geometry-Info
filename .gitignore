@@ -29,7 +29,3 @@
 *.exe
 *.out
 *.app
-
-# Build, Bin directories
-build/
-bin/
