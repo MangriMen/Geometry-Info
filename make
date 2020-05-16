@@ -11,7 +11,7 @@ LD_FLAGS = -L $(GTEST_D)/lib -lgtest_main -lpthread
 CFLAG += -isystem $(GTEST_D)/include
 CXX += -g -Wall -Wextra -pthread -std=c++17
 
-all: $(EXE) $(TESTS)
+all: $(EXE)
 
 $(EXE): $(DIR_SRC)/main.o $(DIR_SRC)/geometry.o $(DIR_SRC)/Triangle.o $(DIR_SRC)/Circle.o
 	$(CC) $(CXXFLAGS) $(DIR_SRC)/main.o $(DIR_SRC)/geometry.o $(DIR_SRC)/Triangle.o $(DIR_SRC)/Circle.o -o $(EXE)
