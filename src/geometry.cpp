@@ -1,18 +1,19 @@
-#include <iostream>
-#include <string>
-#include <locale>
-#include <algorithm>
-#include <sstream>
-#include <vector>
-#include <cmath>
-#include <ctime>
 #include "geometry.hpp"
 #include "Circle.hpp"
 #include "Triangle.hpp"
+#include <algorithm>
+#include <cmath>
+#include <ctime>
+#include <iostream>
+#include <locale>
+#include <sstream>
+#include <string>
+#include <vector>
 
 using namespace std;
 
-void geometry() {
+void geometry()
+{
     int amountOfFigures = 0;
     vector<string> str;
     string temp = "";
@@ -50,8 +51,7 @@ void geometry() {
             temp.erase(temp.find(")"), temp.size());
         }
 
-	unsigned int i = 0;
-
+        unsigned int i = 0;
 
         while (i < temp.size()) {
             while (i < temp.size() && temp[i] != ',') {
@@ -71,12 +71,10 @@ void geometry() {
         if (fgname == "circle" || fgname == "Circle") {
             Circle circle(coord[2], make_pair(coord[0], coord[1]));
             circle.cPrint();
-        }
-        else if (fgname == "triangle" || fgname == "Triangle") {
+        } else if (fgname == "triangle" || fgname == "Triangle") {
             Triangle triangle(coord);
             triangle.tPrint();
-        }
-        else {
+        } else {
             cout << "Error: unknown shape" << '\'' << fgname << '\'';
         }
         cout << endl;

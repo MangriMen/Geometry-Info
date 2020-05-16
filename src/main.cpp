@@ -1,5 +1,5 @@
-#include <iostream>
 #include "geometry.hpp"
+#include <iostream>
 
 int main()
 {
