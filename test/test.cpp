@@ -30,5 +30,5 @@ TEST(AREA, AreaCorrect)
     ASSERT_NEAR(12.5663, circle7.CircleA, 0.001);
 
     Circle circle8(1.978, make_pair(0, 0));
-    ASSERT_NEAR(12.2852, circle8.CircleA, 0.001);
+    ASSERT_NEAR(12.2914, circle8.CircleA, 0.001);
 }
