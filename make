@@ -32,7 +32,7 @@ $(TESTS) : $(DIR_SRC)/geometry.o $(DIR_SRC)/Triangle.o $(DIR_SRC)/Circle.o $(DIR
 	$(CXX) $(CFLAG)  $(LD_FLAGS) -I $(DIR_INCLUDE) $(DIR_SRC)/geometry.o $(DIR_SRC)/Triangle.o $(DIR_SRC)/Circle.o  $(DIR_TEST)/test.o -o $(TESTS)
 
 $(DIR_TEST)/test.o: test/test.cpp
-	$(CXX) $(CFLAG) -I $(GTEST_D)/include -I src -c test/test.cpp -o $(DIR_TEST)/test.o
+	$(CXX) $(CFLAG) -I $(GTEST_D)/include -I $(DIR_INCLUDE) -c test/test.cpp -o $(DIR_TEST)/test.o
 
 clean:
 	rm -rf $(DIR_SRC)/*.o 
