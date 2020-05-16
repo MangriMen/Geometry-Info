@@ -9,13 +9,13 @@ TEST(PERIMETER, PerimeterCorrect)
     ASSERT_NEAR(6.2831, circle1.CircleP, 0.0001);
 
     Circle circle2(0.5, make_pair(0, 0));
-    ASSERT_NEAR(3.14, circle2.CircleP, 0.0001);
+    ASSERT_NEAR(3.1415, circle2.CircleP, 0.0001);
 
     Circle circle3(0.008, make_pair(0, 0));
-    ASSERT_NEAR(0.05, circle3.CircleP, 0.0001);
+    ASSERT_NEAR(0.0502, circle3.CircleP, 0.0001);
 
     Circle circle4(6.28, make_pair(0, 0));
-    ASSERT_NEAR(39.45, circle4.CircleP, 0.0001);
+    ASSERT_NEAR(39.4584, circle4.CircleP, 0.0001);
 }
 
 TEST(AREA, AreaCorrect)
@@ -27,7 +27,7 @@ TEST(AREA, AreaCorrect)
     ASSERT_NEAR(0.0314, circle6.CircleA, 0.0001);
 
     Circle circle7(2, make_pair(0, 0));
-    ASSERT_NEAR(12.56, circle7.CircleA, 0.0001);
+    ASSERT_NEAR(12.5663, circle7.CircleA, 0.0001);
 
     Circle circle8(1.978, make_pair(0, 0));
     ASSERT_NEAR(12.2852, circle8.CircleA, 0.0001);
