@@ -28,7 +28,7 @@ $(DIR_SRC)/Triangle.o: src/Triangle.cpp
 $(DIR_SRC)/Circle.o: src/Circle.cpp
 	$(CC) $(CXXFLAGS) -I $(DIR_INCLUDE) -c src/Circle.cpp -o $(DIR_SRC)/Circle.o
 
-$(TESTS) : $(DIR_SRC)/geometry.o $(DIR_SRC)/Triangle.o $(DIR_TEST)/Circle.o $(DIR_TEST)/test.o
+$(TESTS) : $(DIR_SRC)/geometry.o $(DIR_SRC)/Triangle.o $(DIR_SRC)/Circle.o $(DIR_TEST)/test.o
 	$(CXX) $(CFLAG)  $(LD_FLAGS) -I $(DIR_INCLUDE) $(DIR_SRC)/geometry.o $(DIR_SRC)/Triangle.o $(DIR_SRC)/Circle.o  $(DIR_TEST)/test.o -o $(TESTS)
 
 $(DIR_TEST)/test.o: test/test.cpp
